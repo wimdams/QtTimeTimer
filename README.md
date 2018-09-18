@@ -1,2 +1,2 @@
 # QtTimeTimer
-Simple timer app for the course cross development
+Simple timer app for the cross development course @ThomasMore
