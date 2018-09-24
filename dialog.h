@@ -21,6 +21,7 @@ private slots:
     void on_pbStart_clicked();
     void changeToSettings();
     void changeFromSettings();
+    void timeElapsed();
 private:
     Ui::Dialog *ui;
 };

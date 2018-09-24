@@ -9,6 +9,7 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->clock, SIGNAL(triggered()), this, SLOT(changeToSettings()));
+    connect(ui->clock, SIGNAL(elapsed()), this, SLOT(timeElapsed()));
     connect(ui->pbSave, SIGNAL(clicked()), this, SLOT(changeFromSettings()));
 }
 
@@ -38,6 +39,16 @@ void Dialog::changeFromSettings()
 {
     ui->clock->setBGColor(ui->bgColor->color());
     ui->clock->setFGColor(ui->fgColor->color());
+    ui->clock->setTotalTime(ui->timeEdit->time());
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void Dialog::timeElapsed()
+{
+    ui->clock->reset();
+    ui->pbStart->setText("Start");
+    if(ui->cbSound->isChecked()){
+        QApplication::beep();
+    }
 }
 
