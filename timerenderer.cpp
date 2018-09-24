@@ -49,7 +49,6 @@ void TimeRenderer::paintEvent(QPaintEvent *event)
        int delta = QTime::currentTime().msecsTo(m_endTime);
        int totaal = m_totalTime.msecsSinceStartOfDay();
        hoek = (360.0 * delta * 16) / totaal;
-       QD << hoek;
        if(hoek<0){
            hoek = 0;
            emit elapsed();

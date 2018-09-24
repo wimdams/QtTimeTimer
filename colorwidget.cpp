@@ -20,6 +20,7 @@ void ColorWidget::setColor(QColor newColor)
 
 void ColorWidget::paintEvent(QPaintEvent *event)
 {
+    (void) event;
     QPainter p(this);
     p.setBrush(m_color);
     p.drawRect(0,0,this->width()-1,this->height()-1);
@@ -27,6 +28,7 @@ void ColorWidget::paintEvent(QPaintEvent *event)
 
 void ColorWidget::mousePressEvent(QMouseEvent *event)
 {
+    (void) event;
     QColor c = QColorDialog::getColor(m_color,this,"choose the new color");
     if(c.isValid()){
         m_color = c;
