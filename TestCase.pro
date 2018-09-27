@@ -31,7 +31,8 @@ SOURCES += \
 HEADERS += \
         dialog.h \
     timerenderer.h \
-    colorwidget.h
+    colorwidget.h \
+    wda.h
 
 FORMS += \
         dialog.ui

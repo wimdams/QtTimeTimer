@@ -2,7 +2,7 @@
 #define DIALOG_H
 
 #include <QDialog>
-#include <QDebug>
+#include "wda.h"
 
 namespace Ui {
 class Dialog;

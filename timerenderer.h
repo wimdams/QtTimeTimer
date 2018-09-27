@@ -5,8 +5,7 @@
 #include <QPainter>
 #include <QTime>
 #include <QTimer>
-#include <QDebug>
-#define QD qDebug() << __FILE__ << __LINE__
+#include "wda.h"
 
 class TimeRenderer : public QWidget
 {
